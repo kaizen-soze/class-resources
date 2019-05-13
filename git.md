@@ -41,7 +41,7 @@ When your changes are finished and you've added all relevant changes, you want t
 ### Syntax
 `git commit -<flags> <commit message>`
 
-### Common flags
+### Common Flags
 The `a` flag tells git that the commit should include any files you've added with the `git add` command.
 
 The `m` flag tells git that the commit should include all modified files. Git automatically tracks which files have been modified.
