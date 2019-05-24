@@ -5,4 +5,6 @@ These resources are intended to help new developers get up to speed with commonl
 
 [Using Git](git.md)
 
+[Intro to HTML](html.md)
+
 [How to Fork a Github Repo](https://help.github.com/en/articles/fork-a-repo)
