@@ -213,6 +213,256 @@ The `>=` operator checks to see if the value on the left is greater than or equa
 5 >= 5     // returns true
 ```
 
-## Equality
+### Loose Equality
 
-The `==` operator checks to see if the value on the left is equal to the value on the right.
+The `==` operator checks to see if the value on the left is equal to the value on the right. It doesn't care if you're comparing strings to numbers, it will check for the meaning of what is passed.
+
+```
+let myNumber = "5"
+myNumber == 5    // returns true
+
+myNumber = 6
+myNumber == 6   // returns true
+
+myNumber = "eight"
+myNumber == 8   // returns false because you
+                // compared a string to a number
+
+let name = 'Ben';
+name == 'Ben'     // returns true
+
+const name = 'Ben '
+name == 'Ben'     // returns false due to extra space
+
+const name 'ben'
+name == 'Ben'     // returns false due to case mismatch
+```
+
+### Strict Equality
+
+The `===` operator checks to see if the value on the left is equal to the value on the right. It **also** checks to see if the **type** of each value is the same. If you compare a string and a number, it will fail...even if loose equality says it's the same.
+
+```
+let myNumber = "5"
+myNumber === 5    // returns false
+
+myNumber = 6
+myNumber === 6   // returns true
+
+let myNumber = "eight"
+myNumber === 8   // returns false
+
+let name = 'Ben';
+name === 'Ben'     // returns true
+
+const name = 'Ben '
+name === 'Ben'     // returns false due to extra space
+
+const name 'ben'
+name === 'Ben'     // returns false due to case mismatch
+```
+
+### Loose Inequality
+
+The `!=` operator checks to see if the value on the left is not equal to the value on the right. It doesn't care if you're comparing strings to numbers, it will check for the meaning of what is passed.
+
+```
+let myNumber = "5"
+myNumber != 5    // returns false
+
+myNumber = 6
+myNumber != 6   // returns false
+
+myNumber = "eight"
+myNumber != 8   // returns true because you
+                // compared a string to a number
+
+let name = 'Ben';
+name != 'Ben'     // returns false
+
+const name = 'Ben '
+name != 'Ben'     // returns true due to extra space
+
+const name 'ben'
+name != 'Ben'     // returns true due to case mismatch
+```
+
+### Strict Inequality
+
+The `!==` operator checks to see if the value on the left is not equal to the value on the right. It **also** checks to see if the **type** of each value is not same.
+
+```
+let myNumber = "5"
+myNumber !== 5    // returns true because the types do not match
+
+myNumber = 6
+myNumber !== 6   // returns false
+
+myNumber = "eight"
+myNumber !== 8   // returns true because you
+                 // compared a string to a number, so
+                 // the types don't match
+
+let name = 'Ben';
+name !== 'Ben'     // returns false
+
+const name = 'Ben '
+name !== 'Ben'     // returns true due to extra space
+
+const name 'ben'
+name !== 'Ben'     // returns true due to case mismatch
+```
+
+## Logical Operators
+Logical operators allow you to chain comparisons.
+
+### `&&` Operator
+The `&&` operator evaluates to true if the conditions on each side of the operator are true. When we refer to this operator we call it the AND operator.
+
+```
+const likesCats = true
+const likesDogs = true
+const likesIguanas = true
+
+// Evaluates to true
+const likesPets = likesCats && likesDogs
+
+// Evaluates to true
+const likesAllPets = likesCats && likesDogs && likesIguanas
+```
+
+### `||` Operator
+The `||` operator evaluates to true if the conditions on one side of the operator is true. When we refer to this operator we call it the OR operator.
+
+```
+const likesCats = true
+const likesDogs = false
+const likesIguanas = true
+
+
+// Evaluates to true
+const likesPets = likesCats || likesDogs
+
+// Evaluates to true
+const likesAllPets = likesCats || likesDogs || likesIguanas
+```
+
+### `!` Operator
+Place the `!` operator in front of a condition that evaluates to false and you will get a response of true.
+
+If you place this in front of a condition that evaluates to true, it will return false.
+
+We call this the NOT operator.
+
+```
+const water = 'H2O'
+const peroxide = 'H2O2'
+
+// Evaluates to true
+const notWater = !(water === peroxide)
+```
+
+Humans have a difficult time thinking in negative terms. You're not going to need this operator very often, but when you do it can be useful. Usually the NOT operator can be avoided by restructuring your code.
+
+## Conditional Logic
+
+Conditional logic is used to direct the flow of the program based on the outcome of logical tests.
+
+### `if` Statement
+The most common type of conditional logic used is the `if` statement.
+
+```
+if (condition is true) {
+    // Do a thing
+}
+```
+
+Conditional logic uses comparison operators (`<`, `>`, `!=`, etc) to execute code if the logic is true.
+
+```
+const age = 20
+if (age < 21) {
+    console.log('You must be 21 or older to proceed.')
+}
+
+const votingAge = 18
+if (votingAge >= 18) {
+    console.log('You are eligible to vote!')
+}
+```
+
+### `else` Statement
+An `else` statement executes if the conditional in the `if` statement evaluates to false.
+
+```
+if (condition is true) {
+    // Do a thing
+} else {
+    // Do a different thing
+}
+```
+
+This allows you to take action if the thing you are testing for is not true.
+
+```
+const age = 20
+if (age < 21) {
+    console.log('You must be 21 or older to proceed.')
+} else {
+    console.log('You have passed the age check!')
+}
+
+const votingAge = 18
+if (votingAge >= 18) {
+    console.log('You are eligible to vote!')
+} else {
+    console.log('You must be 18 or older in order to vote')
+}
+```
+
+### `else if` Statement
+
+The `else if` statement allows you to test for a different scenario if you want to take action based on more than two situations.
+
+```
+if (condition is true) {
+    // Do a thing
+} else if (a second condition is true) {
+    // Do a different thing. Executes if block one is
+    // false and block two is true.
+} else {
+    // Do a third thing if both other blocks are true.
+}
+```
+
+`Else if` statements are not limited to three blocks. You can chain `else if` statements for as long as necessary. The problem with this is that as the blocks get longer, the easier it is to avoid logic errors.
+
+```
+const name = 'Jonathan'
+if (name == 'Jack') {
+    console.log('You are on the Programming Pandas team!')
+} else if (name == 'Jonathan') {
+    console.log('You are on the Programming Pandas team!')
+} else if (name == 'Mia') {
+    console.log('You are on the Programming Pandas team!')
+} else {
+    console.log('You are on the Codeasauras Rex team!')
+}
+```
+
+### Switch operator
+
+An easier way to avoid lengthy if/else if blocks is to use the switch operator. The switch operator lets you test multiple conditionals in a more concise manner than if/else.
+
+```
+switch(conditional statement) {
+  case x:
+    // Do a thing
+    break;  // Break out of this switch statement
+  case y:
+    // Do another thing
+    break;
+  default:
+    // If nothing matches, do this
+}
+```
