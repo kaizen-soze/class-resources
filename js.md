@@ -466,3 +466,198 @@ switch(conditional statement) {
     // If nothing matches, do this
 }
 ```
+
+Switch statements only allow you to test one expression at a time. To rewrite our example from the previous section, the switch statement would look like so:
+
+```
+const name = 'Jonathan'
+switch (name) {
+    case 'Jack':
+        console.log('You are on the Programming Pandas team!')
+    break;
+    case 'Mia':
+        console.log('You are on the Programming Pandas team!')
+    break;
+    case 'Jonathan':
+        console.log('You are on the Programming Pandas team!')
+    break;
+    case 'Cara':
+        console.log('You are on the Codeasauras Rex team!')
+    break;
+    case 'Abe':
+        console.log('You are on the Codeasauras Rex team!')
+    break;
+    case 'Kateria':
+        console.log('You are on the Codeasauras Rex team!')
+    break;
+    default:
+        console.log("We can't determine your team")
+    break;
+}
+```
+
+This is pretty verbose, and there's a lot of repetition. We can reduce the repetition by understanding how the `break` keyword works.
+
+When a switch statement encounters the `break` keyword, it immediately steps out of the switch statement and resume execution after the switch's final curly brace.
+
+Knowing this, we can refactor the code as follows:
+
+```
+const name = 'Jonathan'
+switch (name) {
+    case 'Jack':
+    case 'Jonathan':    
+    case 'Mia':
+        console.log('You are on the Programming Pandas team!')
+    break;
+    case 'Abe':
+    case 'Cara':
+    case 'Kateria':
+        console.log('You are on the Codeasauras Rex team!')
+    break;
+    default:
+        console.log("We can't determine your team")
+    break;
+}
+```
+
+The switch statement uses strict comparisons, so types matter!
+
+## Loops
+
+A loop is any piece of code that executes over and over until a condition is met (or stops being met). Loops can be pretty useful when you want to do the same thing over and over, which happens more often than you'd expect.
+
+There are [several types of loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), but we're only going to cover two: `for` and `while` loops.
+
+### `while` Loop
+A `while` loop references an existing variable and applies a conditional statement to it. As long as the conditional evaluates to true, the loop will execute.
+
+```
+let x = 10
+
+while (x > 0) {
+    console.log(x)
+    x--
+}
+```
+
+At the beginning of the loop, `x` is evaluated. The first time, `x` evaluates to 10, which is greater than 0, so the code inside the `while` block executes and the message is printed to the console.
+
+Eventually, `x` is 0, and since 0 is not greater than 0, the loop terminates and code execution resumes.
+
+> Note: Be extremely sure that your conditional will eventually evaluate to `false` or you'll wind up with an infinite loop that never terminates.
+
+### `for` Loop
+
+A for loop initializes a variable, tests it, and repeats over and over until the condition specified in the loop is no longer true.
+
+```
+for (let x = 0; x < 10; x++) {
+    console.log(x)
+}
+```
+
+The above code would print the value of `x` to the console 10 times.
+
+When the loop initializes, it creates `x` as a mutable variable and sets it to a value of 0. On subsequent loops this instruction is skipped; there's no need to create the variable if it already exists.
+
+The conditional (`x < 10`) is then tested, and it returns `true` because 0 is less than 10. Since the condition is true, the code inside the loop is executed. Once the code finishes executing, `x` is incremented by 1, and the process starts over again.
+
+On the 10th loop, `x` is set to 10. When the loop runs the next time, the conditional evaluates to `false` because 10 is not less than 10.
+
+> Note: With loops, it's very common to use `x` or `i` as your variable. However, your code should continue to be readable and understandable. If using a different variable name is better for your code, use that instead. It's merely a convention, not a rule.
+
+## Functions
+
+A function is a piece of code that can be invoked by other pieces of code.
+
+Functions (also called methods or subroutines) typically have a name and can optionally accept arguments.
+
+A function lools like so:
+
+```
+function writeToConsole() {
+    console.log('You just invoked writeToConsole()!')
+}
+
+// To invoke, just use its name followed by parentheses
+writeToConsole()
+```
+
+Functions can accept arguments.
+
+```
+function sayMyName(myName) {
+    console.log(myName)
+}
+
+sayMyName('Ben')
+
+const studentName = 'Cara'
+sayMyName(studentName)
+```
+
+Functions are first-class citizens in Javascript, which means they can be assigned to variables.
+
+```
+const logger = function (myName) {
+    console.log(myName)
+}
+
+logger('Ben')
+
+const studentName = 'Cara'
+logger(studentName)
+```
+
+One important aspect of functions is that they return values. This is optional, but it shouldn't be overlooked. Functions that do not return values are called **void functions**.
+
+```
+function addNumbers(x, y) {
+    return x + y
+}
+
+const ten = 10
+const five = 5
+
+const sum = addNumbers(ten, five)
+
+console.log(`The sum total of ${ten} and ${five} is: ${sum}`)
+```
+
+In the above example, the `addNumbers` method returns a value, which is stored in `sum`.
+
+## Scope
+
+Scope is all about whether or not a variable is available for the currently-running code to access.
+
+Variables initialized with `const` and `let` have something called block level scope that mean they can only be accessed within the current code block or the parent block.
+
+```
+// This code will work
+const food = 'pizza'
+
+function currentlyEating() {
+    console.log(`I currently want to eat ${food}`)
+}
+
+currentlyEating()
+```
+
+The `currentlyEating()` method tries to access the `food` variable, which was defined in the main body of the program. It doesn't find it within the current scope of the method and looks to the parent scope. It finds a value for food and prints the message.
+
+Any variable you reference inside a method must either be defined inside the method, defined in the immediate parent, or passed in as an argument.
+
+```
+// This code will not work
+function defineFood(foodName) {
+    const food = foodName
+}
+
+defineFood('pizza')
+console.log(`I currently want to eat ${food}`)
+```
+
+The `defineFood` method is a bit different. All we're doing is defining a food and exiting.
+
+When we try to access the `food` variable, it isn't available in the current scope, and it throws an error.
