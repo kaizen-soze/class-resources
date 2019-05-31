@@ -22,3 +22,36 @@ These resources are intended to help new developers get up to speed with commonl
 [Bootstrap Documentation](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 
 [Free Bootstrap Themes](https://startbootstrap.com/)
+
+## Videos
+
+Below are links to the videos we've watched in class.
+
+### HTML Basics
+[What is HTML?](https://youtu.be/PORRrz3Y8Vc)
+
+### CSS Basics
+[What is CSS?](https://youtu.be/s7ONvIgOWdM)
+
+[CSS: Cascades](https://youtu.be/tZhmjgLQgXU)
+
+[CSS: Selectors](https://youtu.be/emMO3iCpvrc)
+
+[CSS: Properties & Values](https://youtu.be/4LtwZQ5jxic)
+
+### CSS Layout
+[The CSS Box Model](https://youtu.be/9r2dYgpxCd4)
+
+[Flexbox Tutorial](https://youtu.be/Mkza0N8NiK4)
+
+[Using CSS Grid & Flexbox together](https://youtu.be/RSIclWvNTdQ)
+
+## Intro to Javascript
+[History of Javascript](https://youtu.be/EUAmiIsp2YU)
+
+[Using let instead of var](https://youtu.be/q8SHaDQdul0)
+
+[What is scope?](https://youtu.be/SBwoFkRjZvE)
+
+
+
