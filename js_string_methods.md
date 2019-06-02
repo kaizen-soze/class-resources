@@ -133,10 +133,10 @@ The [`split()` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/R
 ```
 const toxic = "I'm addicted to you, don't you know that you're toxic?"
 
-const words = toxic.split(' )
+const data = toxic.split("'")
 
-// outputs: addicted
-console.log(words[1])
+// outputs: m addicted to you, don
+console.log(data[1])
 
 const phoneNumber = '352.555.1212'
 const parts = phoneNumber.split('.')
