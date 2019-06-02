@@ -688,3 +688,68 @@ console.log(`I currently want to eat ${food}`)
 The `defineFood` method is a bit different. All we're doing is defining a food and exiting.
 
 When we try to access the `food` variable, it isn't available in the current scope, and it throws an error.
+
+## Ternary `if`
+
+There's a more concise way of writing an `if` statement: a ternary `if` statement.
+
+The format is as follows:
+```
+const myVariable = condition ? valueIfTrue : valueIfFalse
+```
+
+Here's an example/
+```
+const patronAge = 25
+const beverage = patronAge >= 21 'alcohol' : 'soda'
+
+// Output: alcohol
+console.log(beverage)
+```
+
+If you are returning true or false, you can omit the values altogether.
+
+```
+const votingAge = 18
+const canVote = votingAge >= 18
+
+// Output: true
+console.log(canVote)
+```
+
+> Note: Ternary ifs [can be chained](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator#Conditional_chains), but in practice it usually makes the code harder to read. If you find a compelling use case, it's an option, but by and large you should avoid it.
+
+## Arrow functions
+ES6 introduces a more concise syntax for methods called `arrow functions`. Arrow functions must return a value, so we're going to stop relying on `console.log()` statements in functions.
+
+```
+// Old syntax
+function square(value) {
+    return value ** value
+}
+
+const sixteen = square(4)
+
+// Arrow syntax
+const squared = (value) => value * value
+const sixtyFour = squared(8)
+```
+
+You can create a method with multiple arguments.
+
+```
+const addNumbers = (x, y) => return x + y
+const eleven = addNumbers(6, 5)
+```
+
+If your method requires line breaks, you must use curly braces around the body of the method.
+
+```
+const addNumbers = (x, y, z = null) => {
+    if (z) {
+        return x + y
+    } else {
+        return x + y + z
+    }
+}
+```
