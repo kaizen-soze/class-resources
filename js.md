@@ -88,12 +88,39 @@ myVariable = 16
 An array is a collection of information. This collection doesn't have to be unique. The elements in the collection can be any type of value, but typically an array is full of the same kind of data.
 
 ```
-const fibonacci = [1, 2, 3, 5, 8, 13, 21]
+const fibonacci = [1, 1, 2, 3, 5, 8, 13, 21]
 const students = ['Cara', 'Mia', 'Jack']
 ```
 
 ### Objects
-Objects are also collections of information, but they have more built-in capabilities than arrays. We'll cover objects more in-depth later.
+Objects are collections of _related_ information, but they have more built-in capabilities than arrays. Arrays are defined by their position, or index. Objects are defined by their properties, which may be variables or methods.
+
+Creating an object is simple. The basic syntax is like so:
+
+```
+let objectName = {
+    property: 'value',
+    methodName: function() { return null }
+}
+```
+Objects have properties and methods associated with them. A property is a key-value pair with information about the object. Properties and methods can be accessed via dot notation.
+
+```
+const motorcycle = {
+    make: 'Kawasaki',
+    model: 'Ninja',
+    year: 2018,
+    start: function() {
+        console.log('Vroom, vroom!')
+    }
+}
+
+motorcycle.start()
+console.log(motorcycle.year)
+console.log(motorcycle)
+```
+
+For a more complex demo, [check this out](https://github.com/kaizen-soze/html5-template/javascript/object.html).
 
 ## Mathematical Operations
 It's common to perform mathematical operations inside code. By and large you'll use the operators you're already familiar with.

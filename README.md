@@ -10,6 +10,14 @@ These resources are intended to help new developers get up to speed with commonl
 
 [Intro to CSS](css.md)
 
+[Intro to Javascript](js.md)
+
+[Javascript String Methods](js_string_methods.md)
+
+[Javascript Number Methods](js_number_methods.md)
+
+[Javascript Array Methods](js_array_methods.md)
+
 ## Resources
 [How to Fork a Github Repo](https://help.github.com/en/articles/fork-a-repo)
 
@@ -46,7 +54,7 @@ Below are links to the videos we've watched in class.
 
 [Using CSS Grid & Flexbox together](https://youtu.be/RSIclWvNTdQ)
 
-## Intro to Javascript
+### Intro to Javascript
 [History of Javascript](https://youtu.be/EUAmiIsp2YU)
 
 [Using let instead of var](https://youtu.be/q8SHaDQdul0)
