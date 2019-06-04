@@ -31,6 +31,8 @@ These resources are intended to help new developers get up to speed with commonl
 
 [Free Bootstrap Themes](https://startbootstrap.com/)
 
+[Javascript Event Directory](https://developer.mozilla.org/en-US/docs/Web/Events)
+
 ## Videos
 
 Below are links to the videos we've watched in class.
@@ -61,5 +63,6 @@ Below are links to the videos we've watched in class.
 
 [What is scope?](https://youtu.be/SBwoFkRjZvE)
 
-
+### Javascript DOM
+[What is the DOM?](https://www.youtube.com/watch?v=H63dVFDuJDM)
 
