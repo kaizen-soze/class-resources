@@ -18,6 +18,8 @@ These resources are intended to help new developers get up to speed with commonl
 
 [Javascript Array Methods](js_array_methods.md)
 
+[How to debug your code](how_to_debug.md)
+
 ## Resources
 [How to Fork a Github Repo](https://help.github.com/en/articles/fork-a-repo)
 
