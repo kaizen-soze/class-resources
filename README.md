@@ -20,6 +20,10 @@ These resources are intended to help new developers get up to speed with commonl
 
 [How to debug your code](how_to_debug.md)
 
+[How to write a technical specification](writing_specs.md)
+
+[Spec for Calculator](calculator_spec.md)
+
 ## Resources
 [How to Fork a Github Repo](https://help.github.com/en/articles/fork-a-repo)
 
@@ -67,4 +71,7 @@ Below are links to the videos we've watched in class.
 
 ### Javascript DOM
 [What is the DOM?](https://www.youtube.com/watch?v=H63dVFDuJDM)
+
+### Algorithms
+[What is an algorithm?](https://www.youtube.com/watch?v=6hfOvs8pY1k)
 
