@@ -62,16 +62,17 @@ Below are links to the videos we've watched in class.
 
 [Using CSS Grid & Flexbox together](https://youtu.be/RSIclWvNTdQ)
 
-### Intro to Javascript
+### Javascript
 [History of Javascript](https://youtu.be/EUAmiIsp2YU)
 
 [Using let instead of var](https://youtu.be/q8SHaDQdul0)
 
 [What is scope?](https://youtu.be/SBwoFkRjZvE)
 
-### Javascript DOM
-[What is the DOM?](https://www.youtube.com/watch?v=H63dVFDuJDM)
+[Object Factories](https://www.youtube.com/watch?v=oSs_25dmxOE)
 
-### Algorithms
+[What is the Javascript DOM?](https://www.youtube.com/watch?v=H63dVFDuJDM)
+
 [What is an algorithm?](https://www.youtube.com/watch?v=6hfOvs8pY1k)
 
+[Spread Operator](https://www.youtube.com/watch?v=1INe_jCWq1Q)
