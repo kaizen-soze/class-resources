@@ -76,3 +76,5 @@ Below are links to the videos we've watched in class.
 [What is an algorithm?](https://www.youtube.com/watch?v=6hfOvs8pY1k)
 
 [Spread Operator](https://www.youtube.com/watch?v=1INe_jCWq1Q)
+
+[ES6 Modules](https://www.youtube.com/watch?v=cRHQNNcYf6s)
