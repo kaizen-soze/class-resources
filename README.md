@@ -78,3 +78,9 @@ Below are links to the videos we've watched in class.
 [Spread Operator](https://www.youtube.com/watch?v=1INe_jCWq1Q)
 
 [ES6 Modules](https://www.youtube.com/watch?v=cRHQNNcYf6s)
+
+[Answering Tricky Interview Questions](https://www.youtube.com/watch?v=MY0UBGX2FtA)
+
+[5 must-know JS questions for interviews](https://www.youtube.com/watch?v=6Wzj7kxfRdI)
+
+[How to solve interview problems](https://www.youtube.com/watch?v=GBuHSRDGZBY)
